@@ -3,6 +3,8 @@
  * Authors: Sanjeev Dasari (sd47) AND Charles Kornoelje (cek26)
  * March 9, 2020
  * CS 232 - Homework3
+ * 
+ * compile with: g++ *.cpp -o main
  */
 
 #include "CSShell.h"
