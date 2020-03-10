@@ -9,5 +9,5 @@
 
 int main () {
 	CSShell myShell;
-	CSShell.run();
+	myShell.run();
 }
