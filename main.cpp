@@ -5,6 +5,7 @@
  * CS 232 - Homework3
  * 
  * compile with: g++ *.cpp -o main
+ * run: ./main
  */
 
 #include "CSShell.h"
