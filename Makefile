@@ -1,5 +1,5 @@
 PROG   = main
-CC     = gcc
+CC     = g++
 CFLAGS = -o
 LFLAGS = $(PROG).cpp CSShell.cpp Path.cpp
 
