@@ -7,9 +7,11 @@
  */
 
 #include "CSShell.h"
-using namespace std;
 
-void CSShell::run()
-{
+CSShell::CSShell() {
+
+}
+
+void CSShell::run() {
   
 }
