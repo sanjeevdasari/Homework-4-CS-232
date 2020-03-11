@@ -15,6 +15,7 @@ class Path
     public:
         Path();
         int find(const string& program) const; // A read-only function
+        string getDirectory(int i) const;
     private:
         void getPathDirs();
         int read(DIR *pDir, struct dirent *pDirent, const string &prog) const;

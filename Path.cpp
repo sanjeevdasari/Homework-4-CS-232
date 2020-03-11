@@ -15,9 +15,11 @@ using namespace std;
 Path::Path()
 {
     getPathDirs();
-    cout << find("ls") << endl;
-    cout << find("flutter") << endl;
-    cout << find("asdf") << endl;
+    find("ls");
+    find("flutter");
+    find("asdf");
+    cout << getDirectory(1) << endl;
+    cout << getDirectory(10) << endl;
 }
 
 /*
@@ -69,6 +71,15 @@ int Path::read(DIR *pDir, struct dirent *pDirent, const string &prog) const
 
     closedir(pDir);
     return false;
+}
+/* return the name of the directory whose index is i.
+ *
+ * 
+ */
+string Path::getDirectory(int i) const
+{
+    // TODO: error handling?
+    return dirs[i];
 }
 
 // Referenced: https://www.geeksforgeeks.org/strtok-strtok_r-functions-c-examples/
