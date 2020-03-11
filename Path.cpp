@@ -18,8 +18,8 @@ Path::Path()
     find("ls");
     find("flutter");
     find("asdf");
-    cout << getDirectory(1) << endl;
-    cout << getDirectory(10) << endl;
+    getDirectory(1);
+    getDirectory(10);
 }
 
 /*
