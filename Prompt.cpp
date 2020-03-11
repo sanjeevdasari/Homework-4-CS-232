@@ -7,10 +7,22 @@
 
 #include "Prompt.h"
 #include <iostream>
+#include <unistd.h> // getcwd()
 using namespace std;
+
+// TODO: do I need to deallocate arrays?
+
+// Don't want to assume C++11
+ char *Prompt::current_path = new char[512];
 
 // Default constructor
 Prompt::Prompt()
 {
-    printf("hello\n");
+    getcwd(current_path, 512);
+    // printf("%s\n", current_path);
+}
+
+Prompt::~Prompt()
+{
+    delete [] current_path;
 }

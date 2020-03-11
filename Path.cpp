@@ -12,6 +12,8 @@
 #include <sys/types.h>
 using namespace std;
 
+// TODO: need to deallocate arrays???? del array?
+
 Path::Path()
 {
     getPathDirs();

@@ -11,6 +11,8 @@ class Prompt
 {
     public:
         Prompt();
-    private:
+        ~Prompt();
         
+    private:
+        static char *current_path;
 };
