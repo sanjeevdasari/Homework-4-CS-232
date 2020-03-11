@@ -7,13 +7,16 @@
 
 #include <string>
 #include <vector>
+#include <dirent.h> // DIR
 using namespace std;
 
 class Path
 {
     public:
         Path();
+        int find(const string& program) const; // A read-only function
     private:
         void getPathDirs();
+        int read(DIR *pDir, struct dirent *pDirent, const string &prog) const;
         vector<string> dirs;
 };
