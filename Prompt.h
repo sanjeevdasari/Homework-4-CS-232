@@ -5,14 +5,15 @@
  * March 10, 2020
  */
 
-
+#include<string>
+using namespace std;
 
 class Prompt
 {
     public:
         Prompt();
         ~Prompt();
-        
+        string get() const;
     private:
         static char *current_path;
 };
