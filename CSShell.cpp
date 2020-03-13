@@ -56,7 +56,11 @@ void CSShell::run()
       else
       {
         pid_t child = fork();
-        if (child == 0)
+        if (child == -1)
+        {
+          cout << "Fork failed." << endl;
+        }
+        else if (child == 0)
         {
           char *env_args[] = {(char *)0}; // TODO check this.
 
@@ -64,6 +68,7 @@ void CSShell::run()
           string prog_path = path.getDirectory(path.find(command)) + "/" + command;
           cout << execve(prog_path.c_str(), cl.getArgVector(), env_args) << flush;
         }
+
         int status;
         if (cl.noAmpersand())
         {
