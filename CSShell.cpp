@@ -14,34 +14,36 @@ using namespace std;
 
 CSShell::CSShell()
 {
-
+  // CommandLine cl(cin);
 }
 
 void CSShell::run()
 {
   Path path;
   Prompt prompt;
-  CommandLine cl;
+
+  string cur_path = prompt.get();
 
   while (true)
   {
+    CommandLine cl(cin);
     char *command = cl.getCommand();
     int argc = cl.getArgCount();
 
-    string path = prompt.get();
-
-    if (command == "cd")
+    if (string(command) == "cd")
     {
       // Handle cd
 
       // Modify path 
+      cout << "cd worked" << endl;
     }
-    else if (command == "pwd")
+    else if (string(command) == "pwd")
     {
       // will this change?
-      cout << path << ": " << flush;
+      cout << cur_path << ": " << endl;
+      // cout << path << ": " << flush;
     }
-    else if (command == "exit")
+    else if (string(command) == "exit")
     {
       // quit program
       exit(0);
@@ -50,8 +52,5 @@ void CSShell::run()
     {
 
     }
-    
-
-
   }
 }

@@ -11,12 +11,6 @@
 
 using namespace std;
 
-CommandLine::CommandLine()
-// it is the default constructor
-{
-	argc = 0;
-}
-
 // --------------------------------------------------------
 
 CommandLine::CommandLine(istream &in)
@@ -28,22 +22,22 @@ CommandLine::CommandLine(istream &in)
 
 	string argWords;
 
+	cout << "$promt: " << flush;
 	getline(in, argWords);
 
 	istringstream argWords1(argWords);
 
 	string word;
 
+	// iterate through words one at a time.
 	while (argWords1 >> word)
 	{
 		if (strcmp(word.c_str(), "&") == 0)
-
 		{
 			noAmpersand_var = false;
 		} // setting to false if there is an ampersand in the command-line
 
 		else
-
 		{
 			myArgv.push_back(word);
 
@@ -56,7 +50,6 @@ CommandLine::CommandLine(istream &in)
 	for (size_t i = 0; i < myArgv.size(); i++)
 	{
 		argv[i] = new char[myArgv[i].size() + 1];
-
 		strcpy(argv[i], myArgv[i].c_str());
 	}
 }

@@ -18,7 +18,6 @@ class CommandLine
 
                                      // Public methods and variables
 public:
-	CommandLine();
 	CommandLine(istream& in);
 	char* getCommand() const;
 	int getArgCount() const;
