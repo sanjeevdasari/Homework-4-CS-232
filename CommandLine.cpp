@@ -46,11 +46,11 @@ CommandLine::CommandLine(istream &in)
         // https://en.cppreference.com/w/c/types/size_t
 	// added space for NULL
 	argv = new char *[myArgv.size() + 1];
-
+                                                  // https://www.gamedev.net/forums/topic/459461-c-how-to-convert-stdstring-to-char-array-of-pointers-to-characters/
 	for (size_t i = 0; i < myArgv.size(); i++)
 	{
 		argv[i] = new char[myArgv[i].size() + 1];
-		
+	                                         // https://stackoverflow.com/questions/24063986/using-argv1-as-a-filename-problems	
 		strcpy(argv[i], myArgv[i].c_str());
 	}
 	argv[myArgv.size()] = NULL;
