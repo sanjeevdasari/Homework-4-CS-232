@@ -40,7 +40,7 @@ void CSShell::run()
     }
     else if (string(command) == "pwd")
     {
-      cout << prompt.get() << "/ " << endl;
+      cout << prompt.get() << endl;
     }
     else if (string(command) == "exit")
     {
