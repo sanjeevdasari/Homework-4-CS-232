@@ -82,7 +82,11 @@ void CSShell::runSysProg(const char *command, Prompt &prompt, CommandLine &cl)
       {
         // Execution of sys program.
         string prog_path = path.getDirectory(path.find(command)) + "/" + command;
-        cout << execve(prog_path.c_str(), cl.getArgVector(), NULL) << flush;
+       int error = execve(prog_path.c_str(), cl.getArgVector(), NULL);
+       if (error == -1)
+       {
+         cout << "Cannot execute command: " << command << endl;
+       }
       }
 
       int status;

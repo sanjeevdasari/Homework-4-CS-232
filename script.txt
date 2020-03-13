@@ -1,0 +1,366 @@
+Script started on 2020-03-13 15:05:49-0400
+]0;cek26@gold20: ~/232hw4/Homework-4-CS-232[01;32mcek26@gold20[00m:[01;34m~/232hw4/Homework-4-CS-232[00m$ make
+g++ *.cpp -o csshell
+]0;cek26@gold20: ~/232hw4/Homework-4-CS-232[01;32mcek26@gold20[00m:[01;34m~/232hw4/Homework-4-CS-232[00m$ ./csshell 
+/home/cek26/232hw4/Homework-4-CS-232/CSShell/$ hi
+Cannot locate command: hi
+/home/cek26/232hw4/Homework-4-CS-232/CSShell/$ ls
+CSShell.cpp  CSShell.h	CommandLine.cpp  CommandLine.h	Makefile  Path.cpp  Path.h  Prompt.cpp	Prompt.h  README.md  csshell  main.cpp	script.txt
+/home/cek26/232hw4/Homework-4-CS-232/CSShell/$ cd ..
+/home/cek26/232hw4/CSShell/$ pwd
+/home/cek26/232hw4
+/home/cek26/232hw4/CSShell/$ ls -a
+.  ..  .vscode	Homework-4-CS-232
+/home/cek26/232hw4/CSShell/$ ls -l /home/cs/
+total 0
+drwxrwsr-x  2 root cs-rights-facstf  2 Jul 24  2019 101
+drwxrwsr-x  6 root cs-rights-facstf 13 Aug 28  2019 106
+drwxrwsr-x  2 root cs-rights-facstf  9 Jan 30 14:56 108
+drwxrwsr-x+ 7 root cs-rights-facstf 15 Feb 13 16:14 112
+drwxrwsr-x  2 root cs-rights-facstf  3 Jan 23  2019 202
+drwxrwsr-x  2 root cs-rights-facstf  4 Jan 23  2019 212
+drwxrwsr-x  4 root cs-rights-facstf  4 Jan 23  2019 214
+drwxrwsr-x  6 root cs-rights-facstf  9 Feb 17 08:52 232
+drwxrwsr-x  2 root cs-rights-facstf  3 Jan 23  2019 262
+drwxrwsr-x  2 root cs-rights-facstf  1 Jan 23  2019 300
+drwxrwsr-x  2 root cs-rights-facstf  1 Jan 23  2019 312
+drwxrwsr-x  5 root cs-rights-facstf  3 Aug 28  2019 332
+drwxrwsr-x  2 root cs-rights-facstf  2 Jan 23  2019 336
+drwxrwsr-x  2 root cs-rights-facstf  1 Jan 23  2019 337
+drwxrwsr-x  2 root cs-rights-facstf  1 Jan 23  2019 342
+drwxrwsr-x  2 root cs-rights-facstf  1 Jul 24  2019 344
+drwxrwsr-x  2 root cs-rights-facstf  1 Jul 24  2019 352
+drwxrwsr-x  2 root cs-rights-facstf  1 Jan 23  2019 364
+drwxrwsr-x  5 root cs-rights-facstf  9 Nov  1 14:00 374
+drwxrwsr-x  2 root cs-rights-facstf  0 Jan 23  2019 384
+drwxrwsr-x  2 root cs-rights-facstf  0 Jan 23  2019 390
+drwxrwsr-x  2 root cs-rights-facstf  0 Jan 23  2019 394
+drwxrwsr-x  2 root cs-rights-facstf  0 Jan 23  2019 398
+drwxrwxr-x  3 ka37 ka37              3 Dec  4 09:03 data202
+drwxrwsr-x  3 root cs-rights-facstf  1 May 17  2018 seniorprojects
+drwxrwsr-x  3 root cs-rights-facstf  2 Jan 23  2019 w61
+/home/cek26/232hw4/CSShell/$ pwd
+/home/cek26/232hw4
+/home/cek26/232hw4/CSShell/$ ps -ax &
+/home/cek26/232hw4/CSShell/$   PID TTY      STAT   TIME COMMAND
+    1 ?        Ss     0:06 /sbin/init
+    2 ?        S      0:00 [kthreadd]
+    3 ?        I<     0:00 [rcu_gp]
+    4 ?        I<     0:00 [rcu_par_gp]
+    6 ?        I<     0:00 [kworker/0:0H-kb]
+    9 ?        I<     0:00 [mm_percpu_wq]
+   10 ?        S      0:00 [ksoftirqd/0]
+   11 ?        I      0:08 [rcu_sched]
+   12 ?        S      0:00 [migration/0]
+   13 ?        S      0:00 [idle_inject/0]
+   14 ?        S      0:00 [cpuhp/0]
+   15 ?        S      0:00 [cpuhp/1]
+   16 ?        S      0:00 [idle_inject/1]
+   17 ?        S      0:00 [migration/1]
+   18 ?        S      0:00 [ksoftirqd/1]
+   20 ?        I<     0:00 [kworker/1:0H-kb]
+   21 ?        S      0:00 [cpuhp/2]
+   22 ?        S      0:00 [idle_inject/2]
+   23 ?        S      0:00 [migration/2]
+   24 ?        S      0:00 [ksoftirqd/2]
+   26 ?        I<     0:00 [kworker/2:0H-kb]
+   27 ?        S      0:00 [cpuhp/3]
+   28 ?        S      0:00 [idle_inject/3]
+   29 ?        S      0:00 [migration/3]
+   30 ?        S      0:00 [ksoftirqd/3]
+   32 ?        I<     0:00 [kworker/3:0H-kb]
+   33 ?        P      0:00 [cpuhp/4]
+   34 ?        P      0:00 [idle_inject/4]
+   35 ?        P      0:00 [migration/4]
+   36 ?        P      0:00 [ksoftirqd/4]
+   37 ?        I      0:00 [kworker/4:0]
+   38 ?        I<     0:00 [kworker/4:0H]
+   39 ?        P      0:00 [cpuhp/5]
+   40 ?        P      0:00 [idle_inject/5]
+   41 ?        P      0:00 [migration/5]
+   42 ?        P      0:00 [ksoftirqd/5]
+   43 ?        I      0:00 [kworker/5:0]
+   44 ?        I<     0:00 [kworker/5:0H]
+   45 ?        P      0:00 [cpuhp/6]
+   46 ?        P      0:00 [idle_inject/6]
+   47 ?        P      0:00 [migration/6]
+   48 ?        P      0:00 [ksoftirqd/6]
+   49 ?        I      0:00 [kworker/6:0]
+   50 ?        I<     0:00 [kworker/6:0H]
+   51 ?        P      0:00 [cpuhp/7]
+   52 ?        P      0:00 [idle_inject/7]
+   53 ?        P      0:00 [migration/7]
+   54 ?        P      0:00 [ksoftirqd/7]
+   55 ?        I      0:00 [kworker/7:0]
+   56 ?        I<     0:00 [kworker/7:0H]
+   57 ?        S      0:00 [kdevtmpfs]
+   58 ?        I<     0:00 [netns]
+   59 ?        S      0:00 [rcu_tasks_kthre]
+   60 ?        S      0:00 [kauditd]
+   62 ?        S      0:00 [khungtaskd]
+   63 ?        S      0:00 [oom_reaper]
+   64 ?        I<     0:00 [writeback]
+   65 ?        S      0:00 [kcompactd0]
+   66 ?        SN     0:00 [ksmd]
+   67 ?        SN     0:00 [khugepaged]
+  160 ?        I<     0:00 [kintegrityd]
+  161 ?        I<     0:00 [kblockd]
+  162 ?        I<     0:00 [blkcg_punt_bio]
+  164 ?        I<     0:00 [tpm_dev_wq]
+  165 ?        I<     0:00 [ata_sff]
+  166 ?        I<     0:00 [md]
+  167 ?        I<     0:00 [edac-poller]
+  168 ?        I<     0:00 [devfreq_wq]
+  169 ?        S      0:00 [watchdogd]
+  172 ?        S      0:00 [kswapd0]
+  173 ?        I<     0:00 [kworker/u17:0]
+  174 ?        S      0:00 [ecryptfs-kthrea]
+  177 ?        I<     0:00 [kthrotld]
+  178 ?        I<     0:00 [acpi_thermal_pm]
+  180 ?        I<     0:00 [ipv6_addrconf]
+  191 ?        I<     0:00 [kstrp]
+  210 ?        I<     0:00 [charger_manager]
+  271 ?        S      0:00 [scsi_eh_0]
+  273 ?        I<     0:00 [scsi_tmf_0]
+  274 ?        S      0:00 [scsi_eh_1]
+  275 ?        I<     0:00 [scsi_tmf_1]
+  277 ?        S      0:00 [scsi_eh_2]
+  279 ?        I<     0:00 [scsi_tmf_2]
+  280 ?        S      0:00 [scsi_eh_3]
+  281 ?        I<     0:00 [scsi_tmf_3]
+  282 ?        S      0:00 [scsi_eh_4]
+  283 ?        I<     0:00 [scsi_tmf_4]
+  284 ?        S      0:00 [scsi_eh_5]
+  285 ?        I<     0:00 [scsi_tmf_5]
+  293 ?        I<     0:00 [e1000e]
+  294 ?        I<     0:00 [kworker/0:1H-kb]
+  317 ?        I<     0:00 [kworker/1:1H-kb]
+  319 ?        S      0:00 [jbd2/sda5-8]
+  320 ?        I<     0:00 [ext4-rsv-conver]
+  331 ?        I<     0:00 [kworker/3:1H-kb]
+  336 ?        I<     0:00 [kworker/2:1H-kb]
+  365 ?        S<s    0:01 /lib/systemd/systemd-journald
+  397 ?        Ss     0:00 /lib/systemd/systemd-udevd
+  402 ?        S<     0:00 [loop0]
+  421 ?        S<     0:00 [loop1]
+  431 ?        S<     0:00 [loop2]
+  435 ?        S<     0:00 [loop3]
+  459 ?        S<     0:00 [loop4]
+  468 ?        S<     0:00 [loop5]
+  472 ?        S<     0:00 [loop6]
+  473 ?        S<     0:00 [loop7]
+  484 ?        S<     0:00 [loop8]
+  489 ?        S<     0:00 [loop9]
+  497 ?        S<     0:00 [loop10]
+  501 ?        S      0:00 [irq/31-mei_me]
+  531 ?        S<     0:00 [loop11]
+  567 ?        S<     0:00 [loop12]
+  579 ?        S<     0:00 [loop13]
+  583 ?        S<     0:00 [loop14]
+  603 ?        Ss     0:00 /lib/systemd/systemd-networkd
+  608 ?        S<     0:00 [loop15]
+  617 ?        S<     0:00 [loop16]
+  626 ?        S<     0:00 [loop17]
+  627 ?        S<     0:00 [loop18]
+  629 ?        I<     0:00 [cryptd]
+  632 ?        Ss     0:00 /lib/systemd/systemd-resolved
+  645 ?        S<     0:00 [loop19]
+  646 ?        S<     0:00 [loop20]
+  647 ?        S<     0:00 [loop21]
+  649 ?        S<     0:00 [loop22]
+  673 ?        S<     0:00 [loop23]
+  686 ?        S<     0:00 [loop24]
+  690 ?        S<     0:00 [loop25]
+  693 ?        S      0:00 [nv_queue]
+  694 ?        S      0:00 [nv_queue]
+  742 ?        S      0:00 [nvidia-modeset/]
+  747 ?        S      0:00 [nvidia-modeset/]
+  748 ?        Ss     0:06 /usr/sbin/rngd -f
+  752 ?        Ss     0:00 /usr/sbin/acpid
+  758 ?        S<     0:00 [loop26]
+  759 ?        Ss     0:00 /usr/sbin/sssd -i --logger=files
+  760 ?        Ssl    0:04 /usr/lib/udisks2/udisksd
+  763 ?        Ss     0:00 /usr/sbin/atd -f
+  764 ?        Ssl    0:00 /usr/bin/python3 /usr/bin/networkd-dispatcher --run-startup-triggers
+  765 ?        Ssl    0:01 /usr/sbin/irqbalance --foreground
+  767 ?        Ss     0:01 /usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+  782 ?        S<     0:00 [loop27]
+  784 ?        S<     0:00 [loop28]
+  788 ?        S<     0:00 [loop29]
+  791 ?        Ssl    0:01 /usr/sbin/thermald --no-daemon --dbus-enable
+  793 ?        Ss     0:00 /usr/sbin/cron -f
+  795 ?        S      0:15 /usr/lib/x86_64-linux-gnu/sssd/sssd_be --domain AD.CALVIN.EDU --uid 0 --gid 0 --logger=files
+  798 ?        Ss     0:00 /sbin/wpa_supplicant -u -s -O /run/wpa_supplicant
+  813 ?        Ss     0:02 avahi-daemon: running [gold20.local]
+  814 ?        Ssl    0:00 /usr/sbin/NetworkManager --no-daemon
+  818 ?        S<     0:01 /usr/sbin/atopacctd
+  820 ?        S      0:00 avahi-daemon: chroot helper
+  828 ?        S<     0:00 [loop30]
+  835 ?        S<     0:00 [loop31]
+  842 ?        Ssl    0:00 /usr/lib/policykit-1/polkitd --no-debug
+  844 ?        S      0:06 /usr/lib/x86_64-linux-gnu/sssd/sssd_nss --uid 0 --gid 0 --logger=files
+  845 ?        S      0:00 /usr/lib/x86_64-linux-gnu/sssd/sssd_pam --uid 0 --gid 0 --logger=files
+  846 ?        S      0:00 /usr/lib/x86_64-linux-gnu/sssd/sssd_pac --uid 0 --gid 0 --logger=files
+  861 ?        S<     0:00 [loop32]
+  862 ?        I<     0:00 [iprt-VBoxWQueue]
+  864 ?        Ssl    0:02 /opt/puppetlabs/puppet/bin/ruby /opt/puppetlabs/puppet/bin/puppet agent --no-daemonize
+  868 ?        Ss     0:02 /usr/bin/perl /usr/local/scripts/computerinfodaemon.pl
+  876 ?        S      0:00 [iprt-VBoxTscThr]
+  882 ?        S      0:02 /usr/lib/postgresql/10/bin/postgres -D /var/lib/postgresql/10/main -c config_file=/etc/postgresql/10/main/postgresql.con
+  883 ?        Ss     0:00 /usr/sbin/sshd -D
+  889 ?        Ssl    0:03 /usr/lib/snapd/snapd
+  893 ?        Ssl    0:01 /usr/sbin/ntpd -p /var/run/ntpd.pid -g -u 107:111
+  905 ?        Ssl    0:00 /usr/lib/accountsservice/accounts-daemon
+  906 ?        Ss     0:00 /lib/systemd/systemd-logind
+  940 ?        S      0:00 [UVM global queu]
+  942 ?        S      0:00 [UVM deferred re]
+  943 ?        S      0:00 [UVM Tools Event]
+  975 ?        Ssl    0:00 /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+  978 ?        Ssl    0:00 /usr/lib/colord/colord
+ 1007 ?        Ss     0:00 postgres: 10/main: checkpointer process   
+ 1008 ?        Ss     0:00 postgres: 10/main: writer process   
+ 1009 ?        Ss     0:00 postgres: 10/main: wal writer process   
+ 1010 ?        Ss     0:00 postgres: 10/main: autovacuum launcher process   
+ 1011 ?        Ss     0:00 postgres: 10/main: stats collector process   
+ 1012 ?        Ss     0:00 postgres: 10/main: bgworker: logical replication launcher   
+ 1150 ?        Ss     0:00 /usr/bin/nvidia-persistenced --user nvidia-persistenced --no-persistence-mode --verbose
+ 1334 ?        Ssl    0:00 /usr/bin/whoopsie -f
+ 1336 ?        Ss     0:01 /usr/sbin/inetd
+ 1376 ?        I<     0:00 [ceph-msgr]
+ 1401 ?        I<     0:00 [ceph-watch-noti]
+ 1402 ?        I<     0:00 [ceph-completion]
+ 1531 ?        Sl     0:00 /usr/bin/mono /usr/lib/mono/4.5/xsp4.exe --port 8084 --address 0.0.0.0 --appconfigdir /etc/xsp4 --nonstop
+ 1536 ?        Ss     0:00 /usr/sbin/kerneloops --test
+ 1537 ?        Ss     0:00 /usr/lib/postfix/sbin/master -w
+ 1539 ?        Ss     0:00 /usr/sbin/kerneloops
+ 1542 ?        Ssl    0:00 /usr/bin/sddm
+ 1547 ?        S      0:00 qmgr -l -t fifo -u
+ 1849 ?        Sl     0:11 /usr/lib/firefox/firefox -contentproc -childID 4 -isForBrowser -prefsLen 8766 -prefMapSize 213099 -parentBuildID 2020030
+ 2866 ?        Ssl    0:00 /usr/lib/packagekit/packagekitd
+ 2941 ?        Ss     0:00 /lib/systemd/systemd --user
+ 2942 ?        S      0:00 (sd-pam)
+ 2988 ?        Ss     0:01 /usr/bin/dbus-daemon --session --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+ 3033 ?        Ssl    0:00 /usr/sbin/rsyslogd -n
+ 3383 ?        S      0:00 /usr/lib/x86_64-linux-gnu/xfce4/xfconf/xfconfd
+ 3405 ?        Sl     0:00 /usr/bin/python3 /usr/share/system-config-printer/applet.py
+ 3415 ?        Sl     0:00 /usr/lib/dconf/dconf-service
+ 3435 ?        Ssl    0:00 /usr/lib/at-spi2-core/at-spi-bus-launcher
+ 3453 ?        S      0:00 /usr/bin/dbus-daemon --config-file=/usr/share/defaults/at-spi2/accessibility.conf --nofork --print-address 3
+ 3462 ?        Ssl    0:00 /usr/lib/gvfs/gvfsd
+ 3467 ?        Sl     0:00 /usr/lib/gvfs/gvfsd-fuse /run/user/342720/gvfs -f -o big_writes
+ 3479 ?        Ssl    0:00 /usr/lib/upower/upowerd
+ 3553 ?        SNsl   0:00 /usr/lib/rtkit/rtkit-daemon
+ 3574 ?        Ssl    0:02 /usr/lib/gvfs/gvfs-udisks2-volume-monitor
+ 3592 ?        Ssl    0:00 /usr/lib/gvfs/gvfs-gphoto2-volume-monitor
+ 3596 ?        Ssl    0:00 /usr/lib/gvfs/gvfs-afc-volume-monitor
+ 3601 ?        Ssl    0:00 /usr/lib/gvfs/gvfs-goa-volume-monitor
+ 3605 ?        Ssl    0:00 /usr/lib/gvfs/gvfs-mtp-volume-monitor
+ 3612 ?        Sl     0:00 /usr/lib/gvfs/gvfsd-trash --spawner :1.23 /org/gtk/gvfs/exec_spaw/0
+ 4808 tty1     Ssl+   1:15 /usr/lib/xorg/Xorg -nolisten tcp -auth /var/run/sddm/{a964fbf9-d856-4efe-9cab-9dea5e0980db} -background none -noreset -d
+ 4811 ?        S      0:58 [irq/33-nvidia]
+ 4812 ?        S      0:00 [nvidia]
+ 4813 ?        S      0:20 [nv_queue]
+ 4849 ?        Ssl    0:00 /usr/lib/gvfs/gvfsd-metadata
+ 7300 ?        Sl     0:00 /snap/code/26/usr/share/code/code /snap/code/26/usr/share/code/resources/app/extensions/json-language-features/server/di
+ 7514 ?        I      0:05 [kworker/3:2-cep]
+ 7616 ?        Sl     0:11 /usr/lib/firefox/firefox -contentproc -childID 7 -isForBrowser -prefsLen 9042 -prefMapSize 213099 -parentBuildID 2020030
+ 7688 ?        Sl     1:25 /usr/lib/firefox/firefox -contentproc -childID 8 -isForBrowser -prefsLen 9042 -prefMapSize 213099 -parentBuildID 2020030
+ 8125 ?        Sl     0:21 /usr/lib/firefox/firefox -contentproc -childID 10 -isForBrowser -prefsLen 9091 -prefMapSize 213099 -parentBuildID 202003
+ 8167 ?        Ss     0:00 /usr/lib/bluetooth/obexd
+ 8285 ?        Sl     2:18 /usr/lib/firefox/firefox -contentproc -childID 11 -isForBrowser -prefsLen 9091 -prefMapSize 213099 -parentBuildID 202003
+ 8322 ?        I      0:00 [kworker/2:3-eve]
+13262 ?        Sl     0:22 /usr/lib/firefox/firefox -contentproc -childID 12 -isForBrowser -prefsLen 9091 -prefMapSize 213099 -parentBuildID 202003
+13370 ?        Sl     0:02 /usr/bin/xfce4-terminal
+13374 pts/0    Ss     0:00 bash
+13512 ?        S<Ls   0:09 /usr/bin/atop -R -w /var/log/atop/atop_20200313 600
+13714 ?        Sl     0:17 /home/cek26/.vscode/extensions/ms-vscode.cpptools-0.27.0-insiders2/bin/cpptools-srv 28940 14
+13745 ?        Ss     0:00 /usr/sbin/cupsd -l
+13746 ?        Ssl    0:00 /usr/sbin/cups-browsed
+14173 ?        I      0:05 [kworker/0:3-eve]
+14762 ?        I      0:00 [kworker/u16:2+e]
+19302 ?        S      0:00 pickup -l -t fifo -u
+19415 ?        I      0:00 [kworker/u16:0-e]
+20055 ?        I      0:01 [kworker/3:0-mm_]
+20106 pts/0    S+     0:00 script
+20107 pts/1    Ss     0:00 bash -i
+20214 ?        Sl     0:00 /usr/lib/firefox/firefox -contentproc -childID 13 -isForBrowser -prefsLen 9091 -prefMapSize 213099 -parentBuildID 202003
+20338 ?        I      0:00 [kworker/u16:3-e]
+22322 ?        S      0:00 /usr/sbin/xrdp-sesman
+22332 ?        I      0:00 [kworker/0:1-eve]
+22333 ?        S      0:00 /usr/sbin/xrdp
+24747 ?        I      0:00 [kworker/1:1-eve]
+24749 ?        I      0:00 [kworker/1:4-cep]
+25167 pts/1    S+     0:00 script script.txt
+25168 pts/2    Ss     0:00 bash -i
+25193 pts/2    S+     0:00 ./csshell
+25213 pts/2    R+     0:00 ps -ax
+28162 ?        S      0:00 /usr/lib/x86_64-linux-gnu/sddm/sddm-helper --socket /tmp/sddm-authce7c7754-b404-49a5-bca4-a3151cb261a6 --id 3 --start st
+28166 ?        Ss     0:00 /lib/systemd/systemd --user
+28167 ?        S      0:00 (sd-pam)
+28181 ?        Sl     0:00 /usr/bin/gnome-keyring-daemon --daemonize --login
+28185 ?        Sl     0:00 /usr/bin/kwalletd5 --pam-login 19 3
+28186 ?        S      0:00 /bin/sh /etc/xdg/xfce4/xinitrc -- /etc/X11/xinit/xserverrc
+28210 ?        Ss     0:01 /usr/bin/dbus-daemon --session --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+28265 ?        Ss     0:00 /usr/bin/ssh-agent /usr/bin/im-launch startxfce4
+28283 ?        Sl     0:00 xfce4-session
+28298 ?        S      0:00 /usr/lib/x86_64-linux-gnu/xfce4/xfconf/xfconfd
+28305 ?        S      0:08 xfwm4 --replace
+28309 ?        Sl     0:01 xfce4-panel
+28311 ?        S      0:00 Thunar --daemon
+28313 ?        Sl     0:00 xfdesktop
+28314 ?        Ssl    0:00 xfsettingsd
+28316 ?        Sl     0:00 light-locker
+28318 ?        Sl     0:00 /usr/bin/python3 /usr/share/system-config-printer/applet.py
+28322 ?        Sl     0:00 /usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1
+28331 ?        Sl     0:00 /usr/lib/dconf/dconf-service
+28334 ?        S      0:01 xscreensaver -no-splash
+28346 ?        Sl     0:00 nm-applet
+28354 ?        Sl     0:00 update-notifier
+28358 ?        Ssl    0:00 /usr/lib/at-spi2-core/at-spi-bus-launcher
+28363 ?        S      0:00 /usr/bin/dbus-daemon --config-file=/usr/share/defaults/at-spi2/accessibility.conf --nofork --print-address 3
+28365 ?        Sl     0:00 /usr/bin/python3 /usr/bin/blueman-applet
+28366 ?        Ssl    0:00 xfce4-power-manager
+28378 ?        S<l    0:00 /usr/bin/pulseaudio --start --log-target=syslog
+28381 ?        Sl     0:00 /usr/lib/at-spi2-core/at-spi2-registryd --use-gnome-session
+28383 ?        Ssl    0:00 /usr/lib/gvfs/gvfsd
+28388 ?        Sl     0:00 /usr/lib/gvfs/gvfsd-fuse /run/user/343771/gvfs -f -o big_writes
+28416 ?        Ssl    0:00 /usr/lib/x86_64-linux-gnu/xfce4/notifyd/xfce4-notifyd
+28419 ?        Sl     0:00 /usr/lib/x86_64-linux-gnu/xfce4/panel/wrapper-2.0 /usr/lib/x86_64-linux-gnu/xfce4/panel/plugins/libwhiskermenu.so 1 6291
+28424 ?        S      0:00 /usr/lib/x86_64-linux-gnu/xfce4/panel/wrapper-1.0 /usr/lib/x86_64-linux-gnu/xfce4/panel/plugins/libsystray.so 4 6291501 
+28425 ?        Sl     0:00 /usr/lib/x86_64-linux-gnu/xfce4/panel/wrapper-2.0 /usr/lib/x86_64-linux-gnu/xfce4/panel/plugins/libnotification-plugin.s
+28427 ?        Sl     0:00 /usr/lib/x86_64-linux-gnu/xfce4/panel/wrapper-2.0 /usr/lib/x86_64-linux-gnu/xfce4/panel/plugins/libindicator-plugin.so 6
+28429 ?        Sl     0:00 /usr/lib/x86_64-linux-gnu/xfce4/panel/wrapper-2.0 /usr/lib/x86_64-linux-gnu/xfce4/panel/plugins/libstatusnotifier.so 7 6
+28435 ?        Sl     0:00 /usr/lib/x86_64-linux-gnu/xfce4/panel/wrapper-2.0 /usr/lib/x86_64-linux-gnu/xfce4/panel/plugins/libxfce4powermanager.so 
+28442 ?        Sl     0:02 /usr/lib/x86_64-linux-gnu/xfce4/panel/wrapper-2.0 /usr/lib/x86_64-linux-gnu/xfce4/panel/plugins/libpulseaudio-plugin.so 
+28445 ?        Ssl    0:00 /usr/lib/gvfs/gvfs-udisks2-volume-monitor
+28459 ?        Ssl    0:00 /usr/lib/x86_64-linux-gnu/indicator-messages/indicator-messages-service
+28460 ?        Ssl    0:00 /usr/lib/gvfs/gvfs-gphoto2-volume-monitor
+28471 ?        Ssl    0:00 /usr/lib/gvfs/gvfs-afc-volume-monitor
+28476 ?        Ssl    0:00 /usr/lib/gvfs/gvfs-goa-volume-monitor
+28480 ?        Ssl    0:00 /usr/lib/gvfs/gvfs-mtp-volume-monitor
+28489 ?        Sl     0:00 /usr/lib/gvfs/gvfsd-trash --spawner :1.22 /org/gtk/gvfs/exec_spaw/0
+28494 ?        Ssl    0:00 /usr/lib/gvfs/gvfsd-metadata
+28510 ?        Sl     1:43 /usr/lib/firefox/firefox
+28515 ?        I      0:05 [kworker/2:0-eve]
+28564 ?        Sl     0:41 /usr/lib/firefox/firefox -contentproc -childID 1 -isForBrowser -prefsLen 1 -prefMapSize 213099 -parentBuildID 2020030909
+28607 ?        Sl     0:01 /usr/lib/firefox/firefox -contentproc -childID 2 -isForBrowser -prefsLen 6374 -prefMapSize 213099 -parentBuildID 2020030
+28717 ?        Ss     0:00 /usr/lib/bluetooth/obexd
+28772 ?        Ssl    0:35 /snap/code/26/usr/share/code/code --force-user-env --no-sandbox --unity-launch --no-sandbox
+28774 ?        S      0:00 /snap/code/26/usr/share/code/code --type=zygote --no-sandbox
+28797 ?        Sl     1:31 /snap/code/26/usr/share/code/code --type=gpu-process --field-trial-handle=3516353380555494043,7230957789487130552,131072
+28809 ?        Sl     0:00 /snap/code/26/usr/share/code/code --type=utility --field-trial-handle=3516353380555494043,7230957789487130552,131072 --d
+28819 ?        SLl    5:48 /snap/code/26/usr/share/code/code --type=renderer --disable-color-correct-rendering --no-sandbox --field-trial-handle=35
+28886 ?        Sl     1:00 /snap/code/26/usr/share/code/code --inspect-port=0 /snap/code/26/usr/share/code/resources/app/out/bootstrap-fork --type=
+28902 ?        Sl     0:01 /snap/code/26/usr/share/code/code /snap/code/26/usr/share/code/resources/app/out/bootstrap-fork --type=watcherService
+28918 ?        Sl     0:00 /snap/code/26/usr/share/code/code /snap/code/26/usr/share/code/resources/app/out/bootstrap-fork --type=searchService
+28940 ?        Sl     1:38 /home/cek26/.vscode/extensions/ms-vscode.cpptools-0.27.0-insiders2/bin/cpptools
+28979 ?        Sl     0:03 /snap/code/26/usr/share/code/code --type=renderer --disable-color-correct-rendering --no-sandbox --field-trial-handle=35
+31673 ?        Sl     0:00 /usr/lib/gvfs/gvfsd-network --spawner :1.23 /org/gtk/gvfs/exec_spaw/2
+31685 ?        Sl     0:00 /usr/lib/gvfs/gvfsd-smb-browse --spawner :1.23 /org/gtk/gvfs/exec_spaw/4
+31696 ?        Sl     0:00 /usr/lib/gvfs/gvfsd-dnssd --spawner :1.23 /org/gtk/gvfs/exec_spaw/5
+exit
+Exiting...
+]0;cek26@gold20: ~/232hw4/Homework-4-CS-232[01;32mcek26@gold20[00m:[01;34m~/232hw4/Homework-4-CS-232[00m$ exit
+exit
+
+Script done on 2020-03-13 15:06:44-0400
