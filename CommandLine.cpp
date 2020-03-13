@@ -25,9 +25,9 @@ CommandLine::CommandLine(istream &in)
 	getline(in, argWords);
 
 	istringstream argWords1(argWords);
-
+            // Input stream class to operate on strings
 	string word;
-
+        // https://www.tutorialspoint.com/strcmp-in-c-cplusplus
 	// iterate through words one at a time.
 	while (argWords1 >> word)
 	{
@@ -37,19 +37,20 @@ CommandLine::CommandLine(istream &in)
 		} // setting to false if there is an ampersand in the command-line
 
 		else
-		{
+		{     
 			myArgv.push_back(word);
-
+                                          // https://www.includehelp.com/stl/vector-push_back-function-with-example.aspx
 			argc++;
 		}
 	}
-
-	// add space for NULL
+        // https://en.cppreference.com/w/c/types/size_t
+	// added space for NULL
 	argv = new char *[myArgv.size() + 1];
 
 	for (size_t i = 0; i < myArgv.size(); i++)
 	{
 		argv[i] = new char[myArgv[i].size() + 1];
+		
 		strcpy(argv[i], myArgv[i].c_str());
 	}
 	argv[myArgv.size()] = NULL;
@@ -68,7 +69,7 @@ char *CommandLine::getCommand() const
 int CommandLine::getArgCount() const
 
 {
-	return argc; // // return the number of command-line arguments on the command-line (i.e., argc).
+	return argc;  // return the number of command-line arguments on the command-line (i.e., argc).
 }
 
 //------------------------------------------------------------
@@ -84,8 +85,8 @@ char **CommandLine::getArgVector() const // incrementing the char** array pointe
 char *CommandLine::getArgVector(int i) const
 
 {
-	return argv[i]; // return a pointer to the ith (zero-relative) command-line 'word' (i.e., argv[i]).
-} // returns the argument from the vector at the given index
+	return argv[i]; // returns a pointer to the ith (zero-relative) command-line 'word' (i.e., argv[i]).
+}                       // returns the argument from the vector at the given index
 
 //------------------------------------------------------------
 
@@ -98,7 +99,7 @@ bool CommandLine::noAmpersand() const
 //------------------------------------------------------------
 
 CommandLine::~CommandLine()
-{ // destructor for the CommandLine class
+{                         // destructor for the CommandLine class
 	for (size_t i = 0; i < myArgv.size(); i++)
 	{
 		delete[] argv[i];
