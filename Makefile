@@ -1,4 +1,4 @@
-main: main.cpp
+main: *.cpp
 	g++ *.cpp -o main
 
 clean:
