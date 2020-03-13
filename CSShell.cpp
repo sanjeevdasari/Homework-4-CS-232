@@ -33,33 +33,45 @@ void CSShell::run()
 
     if (string(command) == "cd")
     {
-      // Handle incorrect commands!!!!!
-      chdir(cl.getArgVector(1));
+      if (chdir(cl.getArgVector(1)) == -1)
+      {
+        cout << "Cannot change to directory: " << cl.getArgVector(1) << endl;
+      }
     }
     else if (string(command) == "pwd")
     {
-      cout << prompt.get() << ": " << endl;
+      cout << prompt.get() << "/ " << endl;
     }
     else if (string(command) == "exit")
     {
+      cout << "Exiting..." << endl;
       exit(0);
     }
     else
     {
-      pid_t child = fork();
-      if (child == 0)
+      if (path.find(command) == -1)
       {
-        char *env_args[] = {(char *)0}; // TODO check this.
-        string prog_path = path.getDirectory(path.find(command)) + "/" + command;
-        cout << execve(prog_path.c_str(), cl.getArgVector(), env_args) << flush;
+        cout << "Cannot locate command: " << command << endl;
       }
-      int status;
-      if (cl.noAmpersand())
+      else
       {
-        waitpid(child, &status, 0);
-      }
+        pid_t child = fork();
+        if (child == 0)
+        {
+          char *env_args[] = {(char *)0}; // TODO check this.
 
-      // BUG: forks don't close themselves.
+          // TODO: ls -l /home/cs/ BREAKS IT
+          string prog_path = path.getDirectory(path.find(command)) + "/" + command;
+          cout << execve(prog_path.c_str(), cl.getArgVector(), env_args) << flush;
+        }
+        int status;
+        if (cl.noAmpersand())
+        {
+          waitpid(child, &status, 0);
+        }
+
+        // BUG: forks don't close themselves.
+      }
     }
   }
 }
