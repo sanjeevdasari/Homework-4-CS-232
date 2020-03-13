@@ -27,15 +27,15 @@ CommandLine::CommandLine(istream& in)
 
 	noAmpersand_var = true;
 
-	string argString;
+	string argWords;
 
-	getline(in, argString);
+	getline(in, argWords);
 
-	istringstream argStream (argString);
+	istringstream argWords1 (argWords);
 
 	string word;
 
-	while (argStream >> word) 
+	while (argWords1 >> word) 
 {
 		if (strcmp(word.c_str(), "&") == 0) 
 
