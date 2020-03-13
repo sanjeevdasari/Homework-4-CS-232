@@ -27,16 +27,16 @@ Path::Path()
 int Path::find(const string &program) const
 {
     const char *cur_dir;
-    DIR *pDir;
-    struct dirent *pDirent;
+    DIR *p_dir;
+    struct dirent *p_dirent;
     for (unsigned i = 0; i < dirs.size(); i++)
     {
         cur_dir = dirs[i].c_str();
         // printf("Looking at %d %s\n", i, cur_dir);
-        pDir = opendir(cur_dir);
-        if (pDir != NULL)
+        p_dir = opendir(cur_dir);
+        if (p_dir != NULL)
         {
-            if (read(pDir, pDirent, program))
+            if (read(p_dir, p_dirent, program))
             {
                 return i;
             }
@@ -49,17 +49,17 @@ int Path::find(const string &program) const
     return -1;
 }
 
-int Path::read(DIR *pDir, struct dirent *pDirent, const string &prog) const
+int Path::read(DIR *p_dir, struct dirent *p_dirent, const string &prog) const
 {
-    while ((pDirent = readdir(pDir)) != NULL)
+    while ((p_dirent = readdir(p_dir)) != NULL)
     {
-        if (pDirent->d_name == prog)
+        if (p_dirent->d_name == prog)
         {
-            closedir(pDir);
+            closedir(p_dir);
             return true;
         }
     }
-    closedir(pDir);
+    closedir(p_dir);
     return false;
 }
 

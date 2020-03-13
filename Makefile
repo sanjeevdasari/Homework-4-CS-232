@@ -1,5 +1,5 @@
 main: *.cpp
-	g++ *.cpp -o main
+	g++ *.cpp -o csshell
 
 clean:
 	rm -f main a.out *~ *# *.o *.out
