@@ -10,7 +10,6 @@
 #include <string.h>
 #include <dirent.h> // opendir()
 #include <sys/types.h>
-#include "CommandLine.h"
 using namespace std;
 
 // TODO: need to deallocate arrays???? del array?
