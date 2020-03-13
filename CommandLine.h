@@ -18,13 +18,13 @@ class CommandLine
 
                                      // Public methods and variables
 public:
-	CommandLine(istream& in);
+	CommandLine(istream& in); //  Used to read in the commands from the user
 	char* getCommand() const;
-	int getArgCount() const;
-	char** getArgVector() const;
-	char* getArgVector(int i) const;
-	bool noAmpersand() const;
-	virtual ~CommandLine();
+	int getArgCount() const;  // number of command-line arguments on the command-line
+	char** getArgVector() const;  // pointer to a char* array
+	char* getArgVector(int i) const; // pointer to the ith (zero-relative) command-line 'word'
+	bool noAmpersand() const; // true or false if ampersand was given in the command-line
+	virtual ~CommandLine();    // destructor for the CommandLine class
 
                                      // Private variables
 private:
