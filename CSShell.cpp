@@ -9,7 +9,6 @@
 #include "CSShell.h"
 #include "Path.h"
 #include "Prompt.h"
-#include "CommandLine.h"
 #include <iostream>
 using namespace std;
 
@@ -37,19 +36,19 @@ void CSShell::run()
 
       // Modify path 
     }
-    else if (command = "pwd")
+    else if (command == "pwd")
     {
       // will this change?
       cout << path << ": " << flush;
     }
-    else if (command = "exit")
+    else if (command == "exit")
     {
       // quit program
       exit(0);
     }
     else
     {
-      
+
     }
     
 

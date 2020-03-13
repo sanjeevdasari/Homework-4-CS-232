@@ -20,8 +20,6 @@ char *Prompt::current_path = new char[512];
 Prompt::Prompt()
 {
     getcwd(current_path, 512);
-    // printf("%s\n", current_path);
-    // get();
 }
 
 /* an accessor that returns the current value of the Prompt
@@ -29,7 +27,6 @@ Prompt::Prompt()
  */
 string Prompt::get() const
 {
-    string(current_path);
     return string(current_path);
 }
 
