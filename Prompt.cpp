@@ -8,6 +8,7 @@
 #include "Prompt.h"
 #include <iostream>
 #include <unistd.h> // getcwd()
+#include "CommandLine.h"
 using namespace std;
 
 // TODO: do I need to deallocate arrays?
