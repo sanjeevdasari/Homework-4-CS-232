@@ -8,6 +8,7 @@
  */
 
 #include "CommandLine.h"
+#include "Prompt.h"
 
 using namespace std;
 
@@ -16,13 +17,15 @@ using namespace std;
 CommandLine::CommandLine(istream &in)
 
 { // Used to read in the commands from the user
+	Prompt prompt;
+
 	argc = 0;
 
 	noAmpersand_var = true;
 
 	string argWords;
 
-	cout << "$promt: " << flush;
+	cout << prompt.get() << "/CSShell/$ " << flush;
 	getline(in, argWords);
 
 	istringstream argWords1(argWords);
