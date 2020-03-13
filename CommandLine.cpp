@@ -18,35 +18,36 @@ CommandLine::CommandLine()
 	argc = 0;
 }
 
-/*
- * CommandLine() explicit constructor
- * Parameter: istream& in
- *		Used to read in the commands from the user
- * Set the noAmpersand bool variable to false if there is an ampersand in the command-line
- */
-
 // --------------------------------------------------------
+
 CommandLine::CommandLine(istream& in) 
 
-{
+{                       // Used to read in the commands from the user
 	argc = 0;
 
 	noAmpersand_var = true;
 
 	string argString;
+
 	getline(in, argString);
+
 	istringstream argStream (argString);
 
 	string word;
+
 	while (argStream >> word) 
 {
 		if (strcmp(word.c_str(), "&") == 0) 
+
                 {
 			noAmpersand_var = false;
-		} else 
+		} // setting to false if there is an ampersand in the command-line
+
+                else 
 
                 {
 			myArgv.push_back(word);
+
 			argc++;
 		}
 }
@@ -56,6 +57,7 @@ CommandLine::CommandLine(istream& in)
 	for (size_t i = 0; i < myArgv.size(); i++) 
         {
 		argv[i] = new char[myArgv[i].size() + 1];
+
 		strcpy(argv[i], myArgv[i].c_str());
 	}
 }
