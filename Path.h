@@ -9,7 +9,6 @@
 #include <string>
 #include <vector>
 #include <dirent.h> // DIR
-#include "CommandLine.h"
 using namespace std;
 
 class Path

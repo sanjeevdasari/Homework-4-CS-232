@@ -9,7 +9,6 @@
 #include "Prompt.h"
 #include <iostream>
 #include <unistd.h> // getcwd()
-#include "CommandLine.h"
 using namespace std;
 
 // Don't want to assume C++11. Old versions don't support initalizing static vars
