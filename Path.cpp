@@ -17,11 +17,6 @@ using namespace std;
 Path::Path()
 {
     getPathDirs();
-    // find("ls");
-    // find("flutter");
-    // find("asdf");
-    // getDirectory(1);
-    // getDirectory(10);
 }
 
 /*
@@ -56,12 +51,6 @@ int Path::find(const string &program) const
 
 int Path::read(DIR *pDir, struct dirent *pDirent, const string &prog) const
 {
-
-    // printf(cur_dir);
-    // while ((pDirent = readdir(pDir)) != NULL) {
-    //     printf("[%s]\n", pDirent->d_name);
-    // }
-
     while ((pDirent = readdir(pDir)) != NULL)
     {
         if (pDirent->d_name == prog)
@@ -70,10 +59,10 @@ int Path::read(DIR *pDir, struct dirent *pDirent, const string &prog) const
             return true;
         }
     }
-
     closedir(pDir);
     return false;
 }
+
 /* return the name of the directory whose index is i.
  *
  * 
@@ -97,7 +86,4 @@ void Path::getPathDirs()
             token = strtok(NULL, ":");
         }
     }
-
-    // for (unsigned i = 0; i < dirs.size(); i++)
-    //     cout << dirs[i] << endl;
 }
