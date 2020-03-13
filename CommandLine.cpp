@@ -44,7 +44,8 @@ CommandLine::CommandLine(istream &in)
 		}
 	}
 
-	argv = new char *[myArgv.size()];
+	// add space for NULL
+	argv = new char *[myArgv.size() + 1];
 
 	for (size_t i = 0; i < myArgv.size(); i++)
 	{

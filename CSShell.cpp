@@ -1,7 +1,7 @@
 /*
  * CSShell.h is a shell class that simulates a shell program
  *
- * Written by: Sanjeev AND Charles (cek26)
+ * Written by: Sanjeev AND Charles Kornoelje (cek26)
  * CS 232 - HW 4
  * March 9, 2020
  */
@@ -62,11 +62,8 @@ void CSShell::run()
         }
         else if (child == 0)
         {
-          char *env_args[] = {(char *)0}; // TODO check this.
-
-          // TODO: ls -l /home/cs/ BREAKS IT
           string prog_path = path.getDirectory(path.find(command)) + "/" + command;
-          cout << execve(prog_path.c_str(), cl.getArgVector(), env_args) << flush;
+          cout << execve(prog_path.c_str(), cl.getArgVector(), NULL) << flush;
         }
 
         int status;
