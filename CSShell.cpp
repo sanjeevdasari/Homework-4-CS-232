@@ -25,6 +25,8 @@ void CSShell::run()
   while (true)
   {
     Prompt prompt;
+
+    cout << prompt.get() << "/CSShell/$ " << flush;
     CommandLine cl(cin);
     char *command = cl.getCommand();
     int argc = cl.getArgCount();
