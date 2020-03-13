@@ -1,7 +1,8 @@
 /* Path.h declares a class for storing PATH information.
  *
  * Written by: Charles Kornoelje (cek26)
- * CS 232 - HW 4 |  Calvin University
+ * Partner: Sanjeev Dasari (sd47)
+ * CS 232 - HW 4 | Calvin University
  * March 9, 2020
  */
 
