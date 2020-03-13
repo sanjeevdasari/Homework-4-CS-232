@@ -9,6 +9,7 @@
 #include "CSShell.h"
 #include "Path.h"
 #include "Prompt.h"
+#include "CommandLine.h"
 #include <iostream>
 using namespace std;
 
@@ -21,4 +22,37 @@ void CSShell::run()
 {
   Path path;
   Prompt prompt;
+  CommandLine cl;
+
+  while (true)
+  {
+    char *command = cl.getCommand();
+    int argc = cl.getArgCount();
+
+    string path = prompt.get();
+
+    if (command == "cd")
+    {
+      // Handle cd
+
+      // Modify path 
+    }
+    else if (command = "pwd")
+    {
+      // will this change?
+      cout << path << ": " << flush;
+    }
+    else if (command = "exit")
+    {
+      // quit program
+      exit(0);
+    }
+    else
+    {
+      
+    }
+    
+
+
+  }
 }

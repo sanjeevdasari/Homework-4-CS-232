@@ -17,11 +17,11 @@ using namespace std;
 Path::Path()
 {
     getPathDirs();
-    find("ls");
-    find("flutter");
-    find("asdf");
-    getDirectory(1);
-    getDirectory(10);
+    // find("ls");
+    // find("flutter");
+    // find("asdf");
+    // getDirectory(1);
+    // getDirectory(10);
 }
 
 /*
