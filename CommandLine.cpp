@@ -51,6 +51,7 @@ CommandLine::CommandLine(istream &in)
 		argv[i] = new char[myArgv[i].size() + 1];
 		strcpy(argv[i], myArgv[i].c_str());
 	}
+	argv[myArgv.size()] = NULL;
 }
 
 //------------------------------------------------------------

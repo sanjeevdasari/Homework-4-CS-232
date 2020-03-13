@@ -11,8 +11,6 @@
 #include "CommandLine.h"
 using namespace std;
 
-// TODO: do I need to deallocate arrays?
-
 // Don't want to assume C++11
 char *Prompt::current_path = new char[512];
 
